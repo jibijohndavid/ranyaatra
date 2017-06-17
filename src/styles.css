@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'quicksand_dash';
+    src: url('./assets/fonts/quicksand_dash-webfont.woff2') format('woff2'),
+         url('./assets/fonts/quicksand_dash-webfont.woff') format('woff'),
+         url('./assets/fonts/Quicksand_Dash.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'quicksand';
+    src: url('./assets/fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('./assets/fonts/quicksand-regular-webfont.woff') format('woff'),
+         url('./assets/fonts/Quicksand-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('./assets/fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('./assets/fonts/roboto-regular-webfont.woff') format('woff'),
+         url('./assets/fonts/Roboto-Regular.ttf') format('truetype');   
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  font-family: "roboto", Helvetica,Arial,sans-serif;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+nav ul li a, nav ul li a:visited {
+  text-decoration: none;
+  color: #fff;
+}

@@ -1,0 +1,26 @@
+  <header>
+    <div class="header-wrapper">
+      <div class="nav-brand">
+        <button class="ham-icon">
+          <span></span>
+        </button>
+        <a class="page-logo"><img src="./assets/images/logo-white.png" alt="Logo"></a>
+      </div>
+
+      <div class="page-nav">
+        <nav>
+          <ul>
+            <li class="active"><a>HOME</a></li>
+            <li><a routerLink="/dashboard" routerLinkActive="active">ABOUT</a></li>
+            <li><a routerLink="/heroes" routerLinkActive="active">PAGES</a></li>
+            <li><a>CONTACT</a></li>
+            <li><a><i class="fa fa-search"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="cart-wrap" (click)="viewCart()">
+        <i class="fa fa-shopping-cart fa-2x"></i>
+        <span class="cart-count" > {{cart.count}} </span>
+      </div>
+    </div>
+  </header> 

@@ -1,0 +1,43 @@
+
+<div class="package-wrapper">
+	<div class="packages">
+
+		<div *ngFor="let item of dataPackage" class="package-item" >
+			<div class="package-image" [style.background-image]="'url(./assets/images/' + item.no_of_days + '.jpg)'"></div>
+			<div class="package-details">				
+				<div class="package-name">{{item.destination}}</div>
+				<div class="package-days">
+					<i class="fa fa-calendar"></i>
+					<span *ngIf="item.no_of_days !== 1">{{item.no_of_days}} days</span>
+					<span *ngIf="item.no_of_days === 1">{{item.no_of_days}} day</span>
+				</div>
+				<div class="package-desc">
+					<span>{{item.package_description}}</span>
+				</div>
+			</div>
+			<div class="package-action">
+				<button><span>View Package</span></button><button (click)="addToCart(item)" class="btn-add"><i class="fa fa-plus-square-o"></i></button>
+			</div>
+
+
+<!-- 			<div class="hover-wrapper">
+				<div class="hover-content">
+					<div class="package-top">
+						
+					</div>
+					<div class="package-middle">
+						<span class="destination">{{item.destination}}</span>
+						<span class="no-of-days" *ngIf="item.no_of_days !== 1">{{item.no_of_days}} days</span>
+						<span class="no-of-days" *ngIf="item.no_of_days === 1">{{item.no_of_days}} day</span>
+					</div>
+					<div class="package-bottom">
+						<button>View Details</button>
+					</div>
+				</div>
+			</div> -->
+		</div>
+
+		<button class="load-packages">Load More</button>
+
+	</div>
+</div>

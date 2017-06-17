@@ -1,0 +1,60 @@
+$primary-color: #1D2731  ;
+$secondary-color: #F7C331;
+$text-color:  white;
+
+.package-header {
+  background-color: #1f2746;
+  color: white;
+  text-align: center;
+  height: 75px;
+  line-height: 72px;
+  margin-top: 20px;
+}
+
+.wrapper {
+  .main-wrapper {
+    .banner {
+
+        position: relative;
+        height: calc(100vh - 113px);
+        overflow: hidden;
+
+        .flexslider {
+            border: 0;
+
+
+            img {
+              top: 0;
+            }
+        }
+
+         .contact {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            display: block;
+            max-width: 950px;
+            background: transparentize($primary-color, .2);
+            border-radius: 5px;
+            top: 0;
+            height: 77px;
+        }
+
+    }
+
+    .main-content {
+      }
+    }
+
+    footer {
+      .foo-wrap {
+        height: 150px;
+        background-color: $primary-color;
+        color: white;
+        text-align: center;
+        padding: 50px;
+      }
+    }
+  }
