@@ -1,0 +1,26 @@
+
+<div class="package-wrapper">
+	<div class="packages">
+
+		<div *ngFor="let item of dataPackage" class="package-item" >
+			<div class="package-image" [style.background-image]="'url(./assets/images/' + item.no_of_days + '.jpg)'"></div>
+			<div class="package-details">				
+				<div class="package-name">{{item.destination}}</div>
+				<div class="package-days">
+					<i class="fa fa-calendar"></i>
+					<span *ngIf="item.no_of_days !== 1">{{item.no_of_days}} days {{item.no_of_days}} nights</span>
+					<span *ngIf="item.no_of_days === 1">{{item.no_of_days}} day {{item.no_of_days}} night</span>
+				</div>
+				<div class="package-desc">
+					<span>{{item.package_description}}</span>
+				</div>
+			</div>
+			<div class="package-action">
+				<button><span>Read More</span></button>
+			</div>
+		</div>
+
+		<button class="load-packages">Load More</button>
+
+	</div>
+</div>
