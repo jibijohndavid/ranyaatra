@@ -116,6 +116,7 @@ header {
     
     i {
       color: $secondary-color;
+      font-size: 1.5em;
     }
     .cart-count {
       position: absolute;
@@ -128,6 +129,7 @@ header {
       color: $secondary-color;
       line-height: 10px;
       text-align: center;
+      font-family: 'quicksand';
     }
 
   }

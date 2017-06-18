@@ -9,8 +9,10 @@ import { AppComponent }         from './app.component';
 import { ContactComponent }     from './contact-component/contact.component';
 import { PackageService }       from './package-service/package.service';
 import { PackageComponent }     from './package-component/package.component';
+import { DestinationComponent }     from './destination-component/destination.component';
 import { HeaderComponent }      from './header-component/header.component';
-import { CartService }       from './package-service/cart.service';
+import { CartService }          from './package-service/cart.service';
+
 
 
 
@@ -19,6 +21,7 @@ import { CartService }       from './package-service/cart.service';
     AppComponent,
     ContactComponent,
     PackageComponent,
+    DestinationComponent,
     HeaderComponent
   ],
   imports: [

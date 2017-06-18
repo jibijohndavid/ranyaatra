@@ -4,6 +4,8 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { PackageData } from '../package-component/PackageData'
+import { DestinationData } from '../destination-component/DestinationData'
+
 import { packages } from '../../assets/api/MOCK_DATA'
 
 
@@ -18,6 +20,9 @@ export class PackageService {
   }
 
   getPackages (): Promise<PackageData[]> {
+      return Promise.resolve(packages);     
+  }
+  getDestination (): Promise<DestinationData[]> {
       return Promise.resolve(packages);     
   }
 }

@@ -9,53 +9,22 @@ $text-color:  #263238;
 		padding: 0 30px; 
 		max-width: 1024px;
 		margin: 0 auto;
-		
-		.package-item:before, .package-item:after {
-			z-index: -1;
-			position: absolute;
-			content: "";
-			bottom: 15px;
-			left: 10px;
-			width: 50%;
-			top: 80%;
-			max-width: 300px;
-			background: #777;
-			-webkit-box-shadow: 0 15px 10px #777;
-			-moz-box-shadow: 0 15px 10px #777;
-			box-shadow: 0 15px 10px #777;
-			-webkit-transform: rotate(-3deg);
-			-moz-transform: rotate(-3deg);
-			-o-transform: rotate(-3deg);
-			-ms-transform: rotate(-3deg);
-			transform: rotate(-3deg);
-		}
-
-		.package-item:after {
-			-webkit-transform: rotate(3deg);
-			-moz-transform: rotate(3deg);
-			-o-transform: rotate(3deg);
-			-ms-transform: rotate(3deg);
-			transform: rotate(3deg);
-			right: 10px;
-			left: auto;
-		}
 
 		.package-item {
 			width: calc(33.3333% - 20px);
 			display: inline-block;
 			height: 475px;
-			margin: 15px 30px 15px 0;
+			margin: 15px 30px 30px 0;
 			background: white;
 			position: relative;
-			border-radius: 6px;
-			box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+			border-radius: 13px;
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
 			.package-image {
 				height: 200px;
 				background-repeat: no-repeat;
 				background-size: cover;
-				border-top: 6px solid  transparentize($secondary-color, .1);
-				border-radius: 2px 2px 0 0;
+				border-radius: 10px 10px 0 0;
 			}
 			
 			.package-details {
@@ -81,6 +50,7 @@ $text-color:  #263238;
 
 					span {
 						margin-left: 3px;
+						text-transform: uppercase;
 					}
 				}
 				.package-desc {
@@ -91,20 +61,21 @@ $text-color:  #263238;
 						line-height: 30px;
 						text-align: justify;
 						font-size: 15px;
-
+						text-overflow: ellipsis; 
 					}
 				}
 			}
 
 			.package-action {
+				background-color: $secondary-color;
 				button {
-						width: 80%;
+						width: 70%;
 						margin: auto;
 						height: 50px;
 						border: none;
 						outline: none;
 						font-family: 'quicksand';
-						border-radius: 0 0 0 5px;
+						border-radius: 0 0 0 10px;
 						color: $primary-color;
 						font-size: 16px;
 						font-weight: bold;
@@ -112,17 +83,19 @@ $text-color:  #263238;
 						transition: .3s;
 					}
 				button:hover {
-					background-color: lighten($secondary-color ,10%);
+					color: white;
 					cursor: pointer;
 				}
 				.btn-add {
-					width: 20%;
-					color: $secondary-color;
-					background-color: $primary-color;
-						border-radius: 0 0 5px 0;
+					width: 30%;
+					color: white;
+					background-color: lighten($primary-color,10%);
+					border-radius: 35px;
+					border: 7px solid $secondary-color;
+					outline: none;
 				}
 				.btn-add:hover {
-					color: $primary-color;
+					color: $secondary-color;
 				}
 			}
 
@@ -146,10 +119,7 @@ $text-color:  #263238;
 		.load-packages:hover {
 			background-color: $secondary-color;
 			color: white;
-		}
-
-		.package-item:hover .hover-wrapper {
-			opacity: 1;
+			outline: none;
 		}
 		.package-item:nth-child(3n) {
 		  margin-right: 0;
