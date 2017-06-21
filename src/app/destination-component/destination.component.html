@@ -8,15 +8,15 @@
 				<div class="package-name">{{item.destination}}</div>
 				<div class="package-days">
 					<i class="fa fa-calendar"></i>
-					<span *ngIf="item.no_of_days !== 1">{{item.no_of_days}} days {{item.no_of_days}} nights</span>
-					<span *ngIf="item.no_of_days === 1">{{item.no_of_days}} day {{item.no_of_days}} night</span>
+					<span *ngIf="item.no_of_days !== 1">{{item.no_of_days}} days {{item.no_of_days -1}} nights</span>
+					<span *ngIf="item.no_of_days === 1">{{item.no_of_days}} day</span>
 				</div>
 				<div class="package-desc">
 					<span>{{item.package_description}}</span>
 				</div>
 			</div>
 			<div class="package-action">
-				<button><span>Read More</span></button>
+				<button><span>Read More</span></button><button (click)="addToCart(item)" class="btn-add"><i class="fa fa-plus-square-o"></i> Add</button>
 			</div>
 		</div>
 

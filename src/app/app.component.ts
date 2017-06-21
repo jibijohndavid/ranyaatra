@@ -12,10 +12,6 @@ export class AppComponent implements OnInit {
   title = 'Tour of Heroes';
 
   ngOnInit(): void {
-      $('.flexslider').flexslider({
-        animation: "slide",
-        controlNav: false,
-        directionNav: false
-      });
+
   }
 }

@@ -12,6 +12,8 @@ import { PackageComponent }     from './package-component/package.component';
 import { DestinationComponent }     from './destination-component/destination.component';
 import { HeaderComponent }      from './header-component/header.component';
 import { CartService }          from './package-service/cart.service';
+import { HomeComponent } from './home/home.component';
+import { DetailComponent } from './detail/detail.component';
 
 
 
@@ -22,7 +24,9 @@ import { CartService }          from './package-service/cart.service';
     ContactComponent,
     PackageComponent,
     DestinationComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

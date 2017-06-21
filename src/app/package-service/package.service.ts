@@ -6,7 +6,7 @@ import 'rxjs/add/operator/toPromise';
 import { PackageData } from '../package-component/PackageData'
 import { DestinationData } from '../destination-component/DestinationData'
 
-import { packages } from '../../assets/api/MOCK_DATA'
+import { packages, destinations } from '../../assets/api/MOCK_DATA'
 
 
 @Injectable()
@@ -23,7 +23,11 @@ export class PackageService {
       return Promise.resolve(packages);     
   }
   getDestination (): Promise<DestinationData[]> {
-      return Promise.resolve(packages);     
+      return Promise.resolve(destinations);     
   }
+  getPackageDetails (id: number): Promise<PackageData> {
+    return this.getPackages()
+                .then (result => result.find( item => item.id === id ));
+  } 
 }
 

@@ -2,86 +2,24 @@ $primary-color: #1D2731  ;
 $secondary-color: #F7C331;
 $text-color:  white;
 
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9;
+    height: 100%;
+}
+
 .wrapper {
-  .main-wrapper {
-    .banner {
 
-        position: relative;
-        height: calc(100vh - 113px);
-        overflow: hidden;
-        margin-bottom: 10px;
+  page-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
 
-        .flexslider {
-            border: 0;
-
-
-            img {
-              top: 0;
-            }
-        }
-
-         .contact {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            display: block;
-            max-width: 950px;
-            background: transparentize($primary-color, .2);
-            border-radius: 5px;
-            top: 0;
-            height: 77px;
-        }
-
-    }
-
-    .main-content {
-        .heading-content {
-          background: url('../assets/images/p1.jpg');
-          background-attachment: fixed;
-          background-color: lighten(#1f2746,77%);
-          color: $primary-color;
-          text-align: center;
-          line-height: 50px;
-          margin: 20px 0;
-          padding: 30px 0;
-
-          span {
-            font-family: 'quicksand';
-            font-size: 25px;
-            color: lighten( black, 60%);
-          }
-
-          h2 {
-            font-family: "quicksand";
-            font-size: 35px;
-            color: $secondary-color;
-          }
-        }
-        .col-container {
-            display: table;
-            width: 80%;
-            margin: 0 auto;
-        }
-        .col {
-            display: table-cell;
-            padding: 25px;
-            width: 25%;
-            text-align: center;
-
-            i {
-              background-color: transparentize($primary-color, .2);
-              border-radius: 50%;
-              margin: 20px;
-              color: $secondary-color;
-              width: 175px;
-              height: 175px;
-              line-height: 175px;
-            }
-        }
-      }
-    }
+  main {
+    margin-top: 110px;
+  }
 
     footer {
       .foo-wrap {

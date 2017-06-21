@@ -3,66 +3,7 @@
   <page-header></page-header>
 
   <main>  
-    <div class="main-wrapper">
-      <div class="banner">        
-        <div class="flexslider">
-          <ul class="slides">
-              <li><img src="./assets/images/1.jpg" alt=""></li>
-              <li><img src="./assets/images/2.jpg" alt=""></li>
-              <li><img src="./assets/images/3.jpg" alt=""></li>
-              <li><img src="./assets/images/4.jpg" alt=""></li>
-              <li><img src="./assets/images/5.jpg" alt=""></li>
-          </ul>
-        </div>
-         <div class="contact">
-          <app-contact></app-contact>
-         </div>
-      </div>
-
-      <div class="main-content">
-
-          <!--DESTINATION CONTENT BELOW-->
-          <div class="heading-content">
-            <span>Take a Look at Our</span>
-            <h2>MOST POPULAR DESTINATIONS</h2>
-          </div> 
-          <app-destination></app-destination>
-
-          <!--PACKAGE CONTENT BELOW-->
-          <div class="heading-content">
-            <span>Create Your Own</span>
-            <h2>TOUR PACKAGE</h2>
-          </div> 
-          <app-packages></app-packages>
-
-          <!--WHY CHOOSE US BELOW-->
-          <div class="heading-content">
-            <h2>WHY CHOOSE US?</h2>
-          </div>
-          <div class="col-container">
-            <div class="col">
-              <i class="fa fa-handshake-o fa-5x"></i>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla magnam nam</p>
-            </div>
-
-            <div class="col">
-              <i class="fa fa-cab fa-5x"></i>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla magnam nam</p>
-            </div>
-
-            <div class="col">
-              <i class="fa fa-heart fa-5x"></i>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla magnam nam</p>
-            </div>
-
-            <div class="col">
-              <i class="fa fa-group fa-5x"></i>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla magnam nam</p>
-            </div>
-          </div>          
-      </div>
-
-    </div>  
+    <router-outlet></router-outlet>
   </main>   
 
   <footer>
@@ -73,4 +14,6 @@
   </footer>
 
 </div>
+
+
 
