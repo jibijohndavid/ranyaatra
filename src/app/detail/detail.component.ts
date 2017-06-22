@@ -14,7 +14,7 @@ import { PackageData } 		from '../package-component/PackageData'
 export class DetailComponent implements OnInit {
 
   dataPackage : PackageData;
-
+  dataChk = this.dataPackage;
 
   constructor(
     private packageService: PackageService,
@@ -26,7 +26,7 @@ export class DetailComponent implements OnInit {
 
       this.route.params
       .switchMap((params: Params) => this.packageService.getPackageDetails(+params['id']))
-      .subscribe(hero => this.dataPackage = hero);
+      .subscribe(dataPackage => this.dataPackage = dataPackage);
   }
 
   goBack(): void {

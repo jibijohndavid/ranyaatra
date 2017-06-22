@@ -1,0 +1,48 @@
+$primary-color: #1D2731  ;
+$secondary-color: #F7C331;
+$text-color:  white;
+
+.detail-wrapper {
+	margin-top: 110px;
+		
+	.detail-content {
+		margin: 0 auto;
+		padding: 20px;
+		width: 70%;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+
+		.detail-head {
+			border: 2px solid lighten($secondary-color, 35%);
+			padding: 10px;
+
+			h2 {
+				color: $secondary-color;
+				font-size: 3em;
+				font-family: 'Josefin-Sans';
+				display: inline-block;
+			}
+			span {
+				float: right;
+			}
+		}
+		.detail-menu {
+			background-color: $primary-color;
+			padding: 10px;
+			ul {
+				li {
+					display: inline-block;
+					list-style: none;
+					margin-right: 30px;
+					color: white;
+
+
+					a {
+						text-decoration: none;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}

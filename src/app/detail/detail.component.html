@@ -1,5 +1,21 @@
-<p>
-  detail works!
-  {{dataPackage.destination}}
-</p>
-<button (click)="goBack()">Back to Home</button>
+<div class="detail-wrapper">
+	<div class="detail-content">
+		<div class="detail-head">
+			<h2>{{dataPackage.destination}}</h2>
+			<span>{{dataPackage.no_of_days}} days {{dataPackage.no_of_days -1 }} nights</span>
+		</div>
+		<div class="detail-menu">
+			<ul>
+				<li><a href="">DESCRIPTION</a></li>
+				<li><a href="">ITINERARY</a></li>
+				<li><a href="">LOCATION</a></li>
+			</ul>
+		</div>
+		<div class="detail-menu-content">
+			<p>{{dataPackage.package_description}}</p>
+		</div>
+		<button (click)="goBack()">Back to Home</button>	
+
+	</div>
+
+</div>

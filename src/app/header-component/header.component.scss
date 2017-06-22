@@ -5,7 +5,8 @@ $text-color:  white;
 header {
   background-color: $primary-color;
   height: 110px;
-
+  transition: all 0.1s ease;
+  
     .header-wrapper {
 
       max-width: 100%;
@@ -79,11 +80,13 @@ header {
       height: 100%;
 
         a {
-          line-height: 108px;
+          line-height: 107px;
           display: inline-block;
           padding: 0 20px;
-          border-top: 2px solid transparent;
+          border-top: 3px solid transparent;
           font-weight: bold;
+          transition: all 0.1s ease;
+
         }
 
         li:last-child a {
@@ -138,7 +141,14 @@ header {
 
 }
 
-  
+.shrink-nav {
+  height: 80px;
+  .page-nav {
+    a {
+      line-height: 77px;
+    }
+  }
+}  
  
 
   
