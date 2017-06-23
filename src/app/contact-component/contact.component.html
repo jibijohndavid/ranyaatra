@@ -3,27 +3,36 @@
 		 <form action="" method="" accept-charset="utf-8">
 			 <div>				
 			 	<label for="arrivalDate">Arrival 
-			 		<input id="arrivalDate" type="text" name="arrival">
+			 		<!-- <input id="arrivalDate" type="text" name="arrival"> -->
+			 		<md-input-container>
+			 		  <input mdInput id="arrivalDate" type="text" name="arrival" placeholder="Arrival Date">
+			 		</md-input-container>
 			 	</label>
 
 			 	<label for="duration">Duration 
-			 		<select id="duration">
+<!-- 			 		<select id="duration">
 			 			<option>Select Days </option>
 			 			<option>1-4 Days</option>
 			 			<option>5-7 Days</option>
 			 			<option>9-14 Days</option>
 			 			<option>2-3 Weeks</option>
 			 			<option>> 3 Weeks</option>
-			 		</select>
+			 		</select> -->
+			 		<md-select id="duration" placeholder="Select Days" [(ngModel)]="selected.duration" name="duration">
+			 		   	<md-option *ngFor="let state of availableOptions.duration" [value]="state.code">{{ state.days }}</md-option>
+			 		</md-select>
 			 	</label>
 			 	<label for="tourStyle">Tour Style 
-			 		<select name="tour style">
+<!-- 			 		<select name="tour style">
 			 			<option>Select Style </option>
 			 			<option>Family Vacation</option>
 			 			<option>Honeymoon</option>
 			 			<option>Casual Vacation</option>
 			 			<option>Business Traveller</option>
-			 		</select>
+			 		</select> -->
+			 		<md-select id="tour" placeholder="Select Style" [(ngModel)]="selected.tourStyle" name="tour">
+			 		   	<md-option *ngFor="let state of availableOptions.tourStyle" [value]="state.code">{{ state.style }}</md-option>
+			 		</md-select>
 			 	</label>
 				<button>SEARCH</button>
 			 </div>

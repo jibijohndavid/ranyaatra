@@ -4,9 +4,7 @@ import {Injectable} from '@angular/core'
 @Injectable()
 export class CartService {
 
-   constructor() {
-     console.log('cart service started');
-   }
+   constructor() {}
 
    cartItems = {
      items:[],
