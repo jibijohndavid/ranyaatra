@@ -1,21 +1,53 @@
 <div class="detail-wrapper">
+
 	<div class="detail-content">
 		<div class="detail-head">
 			<h2>{{dataPackage.destination}}</h2>
 			<span>{{dataPackage.no_of_days}} days {{dataPackage.no_of_days -1 }} nights</span>
 		</div>
 		<div class="detail-menu">
-			<ul>
-				<li><a href="">DESCRIPTION</a></li>
-				<li><a href="">ITINERARY</a></li>
-				<li><a href="">LOCATION</a></li>
-			</ul>
-		</div>
-		<div class="detail-menu-content">
-			<p>{{dataPackage.package_description}}</p>
-		</div>
-		<button (click)="goBack()">Back to Home</button>	
+			<md-tab-group>
 
+			  <md-tab label="Description">
+				  <div class="description-content">
+				  	<p>Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.</p>
+				  	<p>{{dataPackage.package_description}}</p>
+				  	<div>
+				  		<span class="test">Departure/Return Location</span>
+				  		<span class="">Trivandrum International Airport</span>
+				  	</div><hr>
+				  	<div>
+				  		<span class="test">Departure Time</span>
+				  		<span class="">Please arrive at least 2 hours before the flight.</span>
+				  	</div><hr>
+				  	<div>
+				  		<span class="test">Included</span>
+				  		<span class="">Testing</span>
+				  	</div>				  					  	
+
+				  </div>
+			  </md-tab>
+
+			  <md-tab label="Itinerary">
+				  <div class="description-content">
+				  	Content 2
+				  </div>
+			  </md-tab>
+
+			  <md-tab label="Location">
+				  <div class="description-content">
+				  	Content 3
+				  </div>
+			  </md-tab>
+
+			</md-tab-group>
+		</div>
+		<div class="detail-bottom">
+			<button class="enquire-button"><i class="fa fa-envelope-o"></i> Send Enquiry</button>
+			<button class="back-button" (click)="goBack()"><i class="fa fa-arrow-left"></i> Back to Home</button>	
+		</div>
 	</div>
+
+	<!-- <div class="contact-content">something hereee</div> -->
 
 </div>
