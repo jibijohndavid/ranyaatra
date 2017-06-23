@@ -4,22 +4,21 @@ $text-color:  white;
 
 .detail-wrapper {
 	margin-top: 110px;
-		
+	
 	.detail-content {
 		margin: 0 auto;
+		width:  50%;
 		padding: 20px;
-		width: 70%;
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-
+		
 		.detail-head {
-			border: 2px solid lighten($secondary-color, 35%);
-			padding: 10px;
+			border-bottom: 2px solid #fef5dd;
+    		margin-bottom: 10px;
 
 			h2 {
 				color: $secondary-color;
 				font-size: 3em;
-				font-family: 'Josefin-Sans';
+				
 				display: inline-block;
 			}
 			span {
@@ -27,21 +26,45 @@ $text-color:  white;
 			}
 		}
 		.detail-menu {
-			background-color: $primary-color;
-			padding: 10px;
-			ul {
-				li {
-					display: inline-block;
-					list-style: none;
-					margin-right: 30px;
-					color: white;
+			.description-content {
+				padding: 15px;
 
+				p {
+					font-family: 'Josefin Sans', sans-serif;
+					font-size:  17px;
+					margin-bottom: 25px;
+					line-height: 20px;
 
-					a {
-						text-decoration: none;
-						color: white;
+				}
+
+				hr {
+					margin: 20px auto;
+    				border-color: transparentize($secondary-color,.8);
+				}
+				div {
+					span:nth-child(1) {
+						display: inline-block;
+						width: 40%;
 					}
 				}
+			}
+		}
+
+		.detail-bottom {
+			margin:  0 auto;
+			width:  100%;
+
+			.enquire-button {
+				background-color: $secondary-color;
+			    width: 150px;
+			    border: none;
+			    outline: none;
+			    padding: 12px 5px;
+			    color: rgb(248, 248, 255);
+			}
+			.back-button {
+				@extend .enquire-button;
+				background-color: $primary-color;
 			}
 		}
 	}

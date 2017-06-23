@@ -4,6 +4,7 @@ import { ActivatedRoute,Params } from '@angular/router';
 import { Location }               from '@angular/common';
 import { PackageService } from '../package-service/package.service';
 import { PackageData } 		from '../package-component/PackageData'
+import { MdTabsModule } from '@angular/material';
 
 
 @Component({
