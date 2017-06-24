@@ -1,6 +1,7 @@
 $primary-color: #1D2731  ;
 $secondary-color: #F7C331;
-$text-color:  white;        
+$text-color:  ghostwhite;     
+$tab-res: 960px;
 
   .main-wrapper {
     .banner {
@@ -32,8 +33,11 @@ $text-color:  white;
             border-radius: 5px;
             top: 0;
             height: 77px;
+      
+            @media screen and (max-width: $tab-res) {
+              max-width: 650px;
+            }
         }
-
     }
 
     .main-content {
@@ -45,15 +49,23 @@ $text-color:  white;
           color: $primary-color;
           text-align: center;
           line-height: 50px;
-          margin: 20px 0;
           padding: 30px 0;
           height: 15em;
+
+          @media screen and (max-width: $tab-res) {
+            height: 10em;
+          }
 
           span {
             font-family: 'quicksand';
             font-size: 2em;
             line-height: 2em;
             color: white;
+
+            @media screen and (max-width: $tab-res) {
+              font-size: 1em;
+              line-height: 1em;
+            }            
           }
 
           h2 {
@@ -61,12 +73,15 @@ $text-color:  white;
             font-size: 4em;
             line-height: 2em;
             color: $secondary-color;
+
+            @media screen and (max-width: $tab-res) {
+              font-size: 2em;
+              line-height: 1em;
+            }             
           }
         }
         .col-container {
             display: table;
-            width: 80%;
-            margin: 0 auto;
         }
         .col {
             display: table-cell;
@@ -74,14 +89,33 @@ $text-color:  white;
             width: 25%;
             text-align: center;
 
+            @media screen and (max-width: $tab-res) {
+              width: 50%;
+              display: inline-block;
+            }
+
             i {
               background-color: transparentize($primary-color, .2);
               border-radius: 50%;
               margin: 20px;
               color: $secondary-color;
-              width: 175px;
-              height: 175px;
+              width: 60%;
               line-height: 175px;
+              padding-bottom: 60%;
+              position: relative;
+
+              @media screen and (max-width: $tab-res) {
+
+              }
+
+            }
+            i:before {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 100%;
+              margin-left: -50%;
+              margin-top: -87.5px
             }
         }
       }

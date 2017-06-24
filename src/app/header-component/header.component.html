@@ -1,18 +1,15 @@
   <header>
     <div class="header-wrapper">
       <div class="nav-brand">
-        <button class="ham-icon">
-          <span></span>
-        </button>
         <a class="page-logo"><img src="./assets/images/logo-white.png" alt="Logo"></a>
       </div>
 
       <div class="page-nav">
         <nav>
           <ul>
-            <li class="active"><a>HOME</a></li>
-            <li><a>PACKAGES</a></li>
-            <li><a>DESTINATIONS</a></li>
+            <li routerLink="/home/" class="active"><a>HOME</a></li>
+            <li routerLink="/home/"><a>PACKAGES</a></li>
+            <li routerLink="/home/"><a>DESTINATIONS</a></li>
             <li><a>CONTACT</a></li>
             <li><a><i class="fa fa-search"></i></a></li>
           </ul>
@@ -22,5 +19,6 @@
         <i class="fa fa-shopping-cart"></i>
         <span class="cart-count"> {{cart.count}} </span>
       </div>
+        <button class="ham-icon"><span></span></button>
     </div>
   </header> 

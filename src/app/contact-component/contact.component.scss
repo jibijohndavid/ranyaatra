@@ -1,48 +1,25 @@
 $primary-color: #1D2731  ;
 $secondary-color: #F7C331;
-$text-color:  white;
+$text-color:  ghostwhite;
 
 
 
-button {
-  position: absolute;
-  right: 0;
-  width: 175px;
-  margin: auto;
-  height: 100%;
-  border: none;
-  color : $primary-color;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 5px;
-  background-color: $secondary-color;
-  font-family: 'quicksand';
-}
+
 
 .form-wrap {
-  margin: 20px;
-  position: relative;
-  div {
-	  margin: 20px 0;
 
-    label {
-	  color: $text-color;
-    padding-right: 10px;
-
-    input, select {
-      height: 40px;
-      padding: 6px 10px;
-      background-color: $text-color;
-      border: 0;
-      border-radius: 2px;
-      box-shadow: none;
-      margin-left: 20px;
-      }
-	  }
+  button {
+    width: 175px;
+    color : $primary-color;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: $secondary-color;
+    font-family: 'quicksand';
+  }
 
   button:hover {
     color: white;
     cursor: pointer;
-}
   }
 }

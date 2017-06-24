@@ -1,11 +1,11 @@
 <div class="detail-wrapper">
 
-	<div class="detail-content">
+	<md-card class="detail-content">
 		<div class="detail-head">
 			<h2>{{dataPackage.destination}}</h2>
 			<span>{{dataPackage.no_of_days}} days {{dataPackage.no_of_days -1 }} nights</span>
 		</div>
-		<div class="detail-menu">
+		<md-card-content class="detail-menu">
 			<md-tab-group>
 
 			  <md-tab label="Description">
@@ -41,12 +41,12 @@
 			  </md-tab>
 
 			</md-tab-group>
-		</div>
-		<div class="detail-bottom">
-			<button class="enquire-button"><i class="fa fa-envelope-o"></i> Send Enquiry</button>
-			<button class="back-button" (click)="goBack()"><i class="fa fa-arrow-left"></i> Back to Home</button>	
-		</div>
-	</div>
+		</md-card-content>
+		<md-card-actions class="detail-bottom">
+			<button md-button class="enquire-button"><i class="fa fa-envelope-o"></i> Send Enquiry</button>
+			<button md-button class="back-button" routerLink="/home/"><i class="fa fa-arrow-left"></i> Back to Home</button>	
+		</md-card-actions>
+	</md-card >
 
 	<!-- <div class="contact-content">something hereee</div> -->
 
