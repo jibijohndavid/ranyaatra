@@ -15,10 +15,12 @@
           </ul>
         </nav>
       </div>
-      <div class="cart-wrap" (click)="openDialog()">
-        <i class="fa fa-shopping-cart"></i>
-        <span class="cart-count"> {{cart.count}} </span>
-      </div>
+      <div class="cart-ham">
+        <div class="cart-wrap" (click)="openDialog()">
+          <i class="fa fa-shopping-cart"></i>
+          <span class="cart-count"> {{cart.count}} </span>
+        </div>
         <button class="ham-icon"><span></span></button>
+      </div>
     </div>
   </header> 
