@@ -6,13 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `npm install` from the root folder for installing all the packages mentioned in package.json to node_modules folder in the root folder.
 
-## Compiling SCSS files
+## Running the app
 
-Run `sass --watch app/:app/` from the `src/` folder to compile all the SCSS files to the respective CSS files at same path.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` from the root folder to open the app in the default browser. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
