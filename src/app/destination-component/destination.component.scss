@@ -2,7 +2,7 @@ $primary-color: #1D2731  ;
 $secondary-color: #F7C331;
 $text-color:  ghostwhite;
 $tab-res: 960px;
-
+$mob-res: 767px;
 
 .package-wrapper {
 
@@ -11,6 +11,10 @@ $tab-res: 960px;
 		padding: 0 50px; 
 		max-width: 1200px;
 		margin: 0 auto;
+
+		@media screen and (max-width: $mob-res) {
+			padding: 0 20px;
+		}
 
 		.package-item {
 			width: calc(33.3333% - 20px);
@@ -34,6 +38,17 @@ $tab-res: 960px;
 				}
 				&:nth-child(even) {
 					margin-right: 0;
+				}
+			}
+
+            @media screen and (max-width: $mob-res) {
+				width: 100%;
+				max-width: 480px;
+				display: block;
+				margin: 20px auto 0;
+
+				&:nth-child(3n), &:nth-child(even) {
+					margin: 20px auto 0;
 				}
 			}
 
