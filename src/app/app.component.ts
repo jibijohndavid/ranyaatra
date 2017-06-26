@@ -10,8 +10,6 @@ enableProdMode();
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Tour of Heroes';
-
   ngOnInit(): void {
 
   }

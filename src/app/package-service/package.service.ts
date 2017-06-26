@@ -29,5 +29,9 @@ export class PackageService {
     return this.getPackages()
                 .then (result => result.find( item => item.id === id ));
   } 
+  getDestinationDetails (id: number): Promise<DestinationData> {
+    return this.getDestination()
+                .then (result => result.find( item => item.id === id ));
+  } 
 }
 

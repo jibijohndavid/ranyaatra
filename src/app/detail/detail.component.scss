@@ -3,7 +3,6 @@ $secondary-color: #F7C331;
 $text-color:  ghostwhite;
 
 .detail-wrapper {
-	margin-top: 110px;
 	
 	.detail-content {
 		margin: 0 auto;
@@ -48,6 +47,19 @@ $text-color:  ghostwhite;
 					}
 				}
 			}
+			.itinerary-content {
+				h3 {
+					padding: 10px 0;
+				}
+				p {
+					font-family: 'Josefin Sans', sans-serif;
+				}
+				ul {
+					li {
+						font-family: 'Josefin Sans', sans-serif;
+					}
+				}
+			}
 		}
 
 		.detail-bottom {
@@ -58,11 +70,21 @@ $text-color:  ghostwhite;
 				background-color: $secondary-color;
 			    width: 150px;
 			    color: $primary-color;
+
+			    i {
+			    	vertical-align: inherit;
+			    	margin-right: 5px;
+			    }
 			}
 			.back-button {
 				@extend .enquire-button;
 				background-color: $primary-color;
 			    color: ghostwhite;
+
+			    i {
+			    	vertical-align: inherit;
+			    	margin-right: 5px;
+			    }
 			}
 		}
 	}

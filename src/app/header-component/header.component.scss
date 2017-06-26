@@ -2,12 +2,20 @@ $primary-color: #1D2731  ;
 $secondary-color: #F7C331;
 $text-color:  ghostwhite;
 $tab-res: 960px;
+$mob-res: 767px;
    
 header {
   background-color: $primary-color;
   height: 110px;
   transition: all 0.1s ease;
-  
+
+  @media screen and (max-width: $tab-res) {
+    height: 80px;
+  }
+
+  @media screen and (max-width: $mob-res) {
+    height: 60px;
+  }
     .header-wrapper {
 
       max-width: 100%;
@@ -48,13 +56,17 @@ header {
 
       @media screen and (max-width: $tab-res) {
         position: absolute;
-        top: 110px;
-        right: 0;
+        top: 80px;
+        right: -250px;
         width: 250px;
         height: auto;
         background-color: $primary-color;
-
       }
+
+      @media screen and (max-width: $mob-res) {
+        top: 60px;
+      }
+
       nav {
 
         li {
@@ -136,11 +148,9 @@ header {
     
     .ham-icon {
       @extend .page-logo;
-      display: inline-block;
-      position: relative;
+      display: none;
       width: 48px;
       height: 48px;
-      line-height: 48px;
       cursor: pointer;
       color: #e8eaf6;
       background-color: transparent;
@@ -148,6 +158,10 @@ header {
       outline: none;
       overflow: visible;
       vertical-align: middle;
+
+      @media screen and (max-width: $tab-res) {
+        display: inline-block;
+      }
   
         span {
           width: 24px;
@@ -159,26 +173,26 @@ header {
           display: block;
           margin: auto;
           transition: .3s all ease;
-        }
-        span::before, span::after {
-          -webkit-transform-origin: 1.71429px center;
-          -moz-transform-origin: 1.71429px center;
-          -ms-transform-origin: 1.71429px center;
-          transform-origin: 1.71429px center;
-          content: "";
-          position: absolute;
-          left: 0;
-          top: -8px;
-          transition: .3s all ease;
-          background-color: $text-color;
-          height: 4px;
-          right: 0;
-          border-radius: 2px;
-        }
-        span::after {
-          top: 8px;
-  
-        }
+        
+          &::before, &::after {
+            -webkit-transform-origin: 1.71429px center;
+            -moz-transform-origin: 1.71429px center;
+            -ms-transform-origin: 1.71429px center;
+            transform-origin: 1.71429px center;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -8px;
+            transition: .3s all ease;
+            background-color: $text-color;
+            height: 4px;
+            right: 0;
+            border-radius: 2px;
+          }
+          &::after {
+            top: 8px;
+          }
+      }
     }
   }
 

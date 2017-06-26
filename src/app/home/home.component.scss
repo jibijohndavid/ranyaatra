@@ -80,43 +80,5 @@ $tab-res: 960px;
             }             
           }
         }
-        .col-container {
-            display: table;
-        }
-        .col {
-            display: table-cell;
-            padding: 25px;
-            width: 25%;
-            text-align: center;
-
-            @media screen and (max-width: $tab-res) {
-              width: 50%;
-              display: inline-block;
-            }
-
-            i {
-              background-color: transparentize($primary-color, .2);
-              border-radius: 50%;
-              margin: 20px;
-              color: $secondary-color;
-              width: 60%;
-              line-height: 175px;
-              padding-bottom: 60%;
-              position: relative;
-
-              @media screen and (max-width: $tab-res) {
-
-              }
-
-            }
-            i:before {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              width: 100%;
-              margin-left: -50%;
-              margin-top: -87.5px
-            }
-        }
       }
     }

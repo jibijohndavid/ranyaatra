@@ -17,10 +17,7 @@ export class PackageComponent implements OnInit {
 
 	constructor ( 
 		private packageService: PackageService,
-		private cartService: CartService
-	 ) {
-		this.cartService = cartService;
-	}
+	 ) {}
 
 	getData (): void {
 		this.packageService.getPackages().then(dataPackage => this.dataPackage = dataPackage);	
@@ -28,10 +25,6 @@ export class PackageComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.getData();
-	}
-
-	addToCart (item) {
-		this.cartService.pushToCart(item);
 	}
 
 }

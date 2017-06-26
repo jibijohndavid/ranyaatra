@@ -20,4 +20,11 @@ export class HomeComponent implements OnInit {
       });
   }
 
+  choose_us = [
+      {text: 'Diverse Destinations', cols: 1, rows: 1, icon: 'handshake-o'},
+      {text: 'Value for Money', cols: 1, rows: 1, icon: 'money'},
+      {text: 'Beautiful Places', cols: 1, rows: 1, icon: 'binoculars'},
+      {text: 'Passionate Travel', cols: 1, rows: 1, icon: 'heart'}
+    ];
+
 }

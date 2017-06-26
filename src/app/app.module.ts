@@ -16,6 +16,7 @@ import { HeaderComponent, DialogContent}      from './header-component/header.co
 import { CartService }          from './package-service/cart.service';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
+import { DetailDestinationComponent } from './detail-destination/detail-destination.component';
 
 
 
@@ -29,7 +30,8 @@ import { DetailComponent } from './detail/detail.component';
     HeaderComponent,
     HomeComponent,
     DetailComponent,
-    DialogContent
+    DialogContent,
+    DetailDestinationComponent
   ],
   imports: [
     BrowserModule,

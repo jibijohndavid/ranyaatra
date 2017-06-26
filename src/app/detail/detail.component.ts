@@ -21,7 +21,6 @@ export class DetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-
       this.route.params
       .switchMap((params: Params) => this.packageService.getPackageDetails(+params['id']))
       .subscribe(dataPackage => this.dataPackage = dataPackage);

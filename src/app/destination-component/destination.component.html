@@ -16,7 +16,7 @@
 				</div>
 			</div>
 			<div class="package-action">
-				<button><span>Read More</span></button><button (click)="addToCart(item)" class="btn-add"><i class="fa fa-plus-square-o"></i> Add</button>
+				<button routerLink="/detail-destination/{{ item.id }}"><span>Read More</span></button><button (click)="addToCart(item)" class="btn-add"><i class="fa fa-plus-square-o"></i> Add</button>
 			</div>
 		</div>
 
