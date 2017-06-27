@@ -3,89 +3,103 @@ $secondary-color: #F7C331;
 $text-color:  ghostwhite;
 
 .detail-wrapper {
-	
-	.detail-content {
-		margin: 0 auto;
-		width:  50%;
-		padding: 20px;
-		// box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-		
-		.detail-head {
-			border-bottom: 2px solid #fef5dd;
-    		margin-bottom: 10px;
+	display: inline-block;
+	width: 100%;
 
-			h2 {
-				color: $secondary-color;
-				font-size: 3em;
-				
-				display: inline-block;
-			}
-			span {
-				float: right;
-			}
-		}
-		.detail-menu {
-			.description-content {
-				padding: 15px;
+	.detail-container {
+		margin: 20px auto;
+		width: 60%;
+		display: table;
 
-				p {
-					font-family: 'Josefin Sans', sans-serif;
-					font-size:  17px;
-					margin-bottom: 25px;
-					line-height: 20px;
+		.detail-content {
+			width:  45%;
+			padding: 20px;
+			display: table-cell;
+			vertical-align: top;
 
+			.detail-head {
+				border-bottom: 2px solid #fef5dd;
+	    		margin-bottom: 10px;
+
+				h2 {
+					color: $secondary-color;
+					font-size: 3em;
+					
+					display: inline-block;
 				}
-
-				hr {
-					margin: 20px auto;
-    				border-color: transparentize($secondary-color,.8);
+				span {
+					float: right;
 				}
-				div {
-					span:nth-child(1) {
-						display: inline-block;
-						width: 40%;
+			}
+			.detail-menu {
+				.description-content {
+					padding: 15px;
+
+					p {
+						font-family: 'Josefin Sans', sans-serif;
+						font-size:  17px;
+						margin-bottom: 25px;
+						line-height: 20px;
+
+					}
+
+					hr {
+						margin: 20px auto;
+	    				border-color: transparentize($secondary-color,.8);
+					}
+					div {
+						span:nth-child(1) {
+							display: inline-block;
+							width: 40%;
+						}
 					}
 				}
-			}
-			.itinerary-content {
-				h3 {
-					padding: 10px 0;
-				}
-				p {
-					font-family: 'Josefin Sans', sans-serif;
-				}
-				ul {
-					li {
+				.itinerary-content {
+					h3 {
+						padding: 10px 0;
+					}
+					p {
 						font-family: 'Josefin Sans', sans-serif;
 					}
+					ul {
+						li {
+							font-family: 'Josefin Sans', sans-serif;
+						}
+					}
+				}
+			}
+
+			.detail-bottom {
+				margin:  0 auto;
+				width:  100%;
+
+				.enquire-button {
+					background-color: $secondary-color;
+				    width: 150px;
+				    color: $primary-color;
+
+				    i {
+				    	vertical-align: inherit;
+				    	margin-right: 5px;
+				    }
+				}
+				.back-button {
+					@extend .enquire-button;
+					background-color: $primary-color;
+				    color: ghostwhite;
+
+				    i {
+				    	vertical-align: inherit;
+				    	margin-right: 5px;
+				    }
 				}
 			}
 		}
-
-		.detail-bottom {
-			margin:  0 auto;
-			width:  100%;
-
-			.enquire-button {
-				background-color: $secondary-color;
-			    width: 150px;
-			    color: $primary-color;
-
-			    i {
-			    	vertical-align: inherit;
-			    	margin-right: 5px;
-			    }
-			}
-			.back-button {
-				@extend .enquire-button;
-				background-color: $primary-color;
-			    color: ghostwhite;
-
-			    i {
-			    	vertical-align: inherit;
-			    	margin-right: 5px;
-			    }
-			}
+		app-contact {
+			width: 30%;
+			padding-left: 5%;
+			display: table-cell;
+			vertical-align: top;
 		}
 	}
 }

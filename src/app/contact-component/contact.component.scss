@@ -2,24 +2,70 @@ $primary-color: #1D2731  ;
 $secondary-color: #F7C331;
 $text-color:  ghostwhite;
 
+.contact-wrapper {
 
+  md-card {
+    background-color: transparentize($secondary-color,.2);
+    
+    md-card-header {
+      display: inherit;
+      margin-bottom: 5px;
+    }
 
+    md-card-content {
+        color: $primary-color;
 
+        div {
+          margin-bottom: 5px;
 
-.form-wrap {
+          md-input-container  {
+            width: 100%;
 
-  button {
-    width: 175px;
-    color : $primary-color;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    background-color: $secondary-color;
-    font-family: 'quicksand';
-  }
+            input[type='number'] {
+                -moz-appearance:textfield;
+            }
 
-  button:hover {
-    color: white;
-    cursor: pointer;
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+          }
+          
+          md-select {
+            margin-top: 5px;
+            display: table-cell;
+            width: 100%;
+            
+            &:first-child {
+              padding-right: 10px;
+            }
+          } 
+        }
+    }
+
+    md-card-actions {
+      div {
+        display: block;
+        margin: 10px auto;
+        
+        button {
+          background-color: $primary-color;
+            width: 50%;
+            color: $text-color;
+            display: block;
+            margin: 0 auto;
+            transition: all .3s;
+
+            &:hover {
+              color: $secondary-color;
+            }
+
+            i {
+              vertical-align: inherit;
+              margin-right: 5px;
+            }
+        }
+      }
+    }
   }
 }

@@ -1,19 +1,50 @@
-	<div class="form-wrap">
-		 <form action="" method="" accept-charset="utf-8">
+<div class="contact-wrapper">
 
-			 		<md-input-container>
-			 		  <input mdInput id="arrivalDate" type="text" name="arrival">
-			 		</md-input-container>
+	<md-card>
+		<md-card-header>
+			<div><h3>Book the tour</h3></div>
+		</md-card-header>
+		<md-card-content>
+			<form action="">
+				<div>
+					<md-input-container>
+						<input mdInput placeholder="First Name">
+					</md-input-container>
+				</div>
+				<div>
+					<md-input-container>
+						<input mdInput placeholder="Last Name">
+					</md-input-container>
+				</div>
+				<div>
+					<md-input-container>
+						<input mdInput placeholder="Email" type="email">
+					</md-input-container>
+				</div>
+				<div>
+					<md-input-container>
+						<input mdInput placeholder="Contact No" type="number">
+					</md-input-container>
+				</div>
+				<div>
+					<md-select placeholder="Adults" [(ngModel)]="selectedAdult" name="adults">
+					    <md-option *ngFor="let adult of adults" [value]="adult.value">
+					      {{adult.viewValue}}
+					    </md-option>
+					  </md-select>
+					  <md-select placeholder="Children" [(ngModel)]="selectedChildren" name="childrens">
+					      <md-option *ngFor="let children of childrens" [value]="children.value">
+					        {{children.viewValue}}
+					      </md-option>
+					    </md-select>
+				</div>
+			</form>
+		</md-card-content>
+		<md-card-actions class="detail-bottom">
+			<div>
+				<button md-button ><i class="fa fa-envelope-o"></i> Send Enquiry</button>
+			</div>
+		</md-card-actions>
+	</md-card>
 
-			 		<md-select id="duration" placeholder="Select Days" [(ngModel)]="selected.duration" name="duration">
-			 		   	<md-option *ngFor="let state of availableOptions.duration" [value]="state.code">{{ state.days }}</md-option>
-			 		</md-select>
-
-			 		<md-select id="tour" placeholder="Select Style" [(ngModel)]="selected.tourStyle" name="tour">
-			 		   	<md-option *ngFor="let state of availableOptions.tourStyle" [value]="state.code">{{ state.style }}</md-option>
-			 		</md-select>
-			 	
-				<button md-button>SEARCH</button>
-
-		</form> 
-	</div>
+</div>
