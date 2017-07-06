@@ -44,17 +44,16 @@ export class HeaderComponent implements OnInit {
       }
     });
 
+    $('.ham-icon').click(function(){
+      $('.page-nav').toggleClass('page-nav-visible');
+    });
+
   }
 }
 
 @Component({
-  template: `
-    <ul>
-      <li *ngFor="let item of cart.items">{{item.destination}}</li>
-    </ul>
-
-    <p> <button md-button (click)="dialogRef.close()">CLOSE</button> </p>
-  `,
+  templateUrl: './cart.html',
+  styleUrls: ['./cart.css']
 })
 export class DialogContent implements OnInit  {
   constructor( 
