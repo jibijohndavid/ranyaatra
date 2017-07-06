@@ -1,0 +1,52 @@
+$primary-color: #1D2731  ;
+$secondary-color: #F7C331;
+$text-color:  ghostwhite;
+$tab-res: 960px;
+$mob-res: 767px;
+
+.cart-wrapper {
+		ul {
+			li {
+				list-style: none;
+
+				md-card {
+					width: 50vw;
+					margin-bottom: 10px;
+					padding: 10px;
+					height: 60px;
+
+					span {
+						position: absolute;
+						right: 5%;
+						top: 30%;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	
+	div {
+		text-align: center;
+
+		button {
+			width: 30%;
+			background-color: $primary-color;
+			color: $text-color;
+
+			&:nth-child(1) {
+				background-color: $secondary-color;
+				color: $primary-color;
+			}
+
+			@media screen and (max-width: $mob-res) {
+				width: auto;
+			}
+		}
+
+	}
+}
+
+.example-header-image {
+	background-image: url(../../assets/images/1.jpg);
+	background-size: cover;
+}

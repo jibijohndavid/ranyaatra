@@ -2,6 +2,7 @@ $primary-color: #1D2731  ;
 $secondary-color: #F7C331;
 $text-color:  ghostwhite;
 $tab-res: 960px;
+$mob-res: 767px;
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.4);
@@ -20,6 +21,7 @@ $tab-res: 960px;
 
   main {
     margin-top: 110px;
+
     @media screen and (max-width: $tab-res) {
       margin-top: 60px;
     }
@@ -45,6 +47,11 @@ $tab-res: 960px;
           bottom: 10px;
           right: 20px;
           color: $secondary-color;
+
+          @media screen and (max-width: $mob-res) {
+            bottom: 50%;
+            right: 18%;
+          }
           
           i {
             margin-left: 10px;
