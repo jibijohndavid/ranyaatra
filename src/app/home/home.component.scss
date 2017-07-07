@@ -2,6 +2,7 @@ $primary-color: #1D2731  ;
 $secondary-color: #F7C331;
 $text-color:  ghostwhite;     
 $tab-res: 960px;
+$mob-res: 767px;
 
   .main-wrapper {
     .banner {
@@ -10,13 +11,29 @@ $tab-res: 960px;
         height: calc(100vh - 113px);
         overflow: hidden;
         margin-bottom: 10px;
+        
+        @media screen and (max-width: $tab-res) {
+          height: calc(100vh - 83px);
+        }
 
+        @media screen and (max-width: $mob-res) {
+          height: calc(100vh - 63px);
+        }
         .flexslider {
             border: 0;
 
             ul {
               li {
                 height: calc(100vh - 113px);
+                
+                @media screen and (max-width: $tab-res) {
+                  height: calc(100vh - 83px);
+                }
+                
+                @media screen and (max-width: $mob-res) {
+                  height: calc(100vh - 63px);
+                }
+
               }
             }
         }
