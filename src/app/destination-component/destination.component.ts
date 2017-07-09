@@ -23,7 +23,17 @@ export class DestinationComponent implements OnInit {
 	}
 
 	getData (): void {
-		this.packageService.getDestination().then(dataPackage => this.dataPackage = dataPackage);	
+
+		this.packageService.getDestination().then(dataPackage => {
+			this.dataPackage = dataPackage;
+			this.setValue();});	
+	}
+
+	setValue() {
+		for (var i = 0; i < this.dataPackage.length; ++i) {
+			this.dataPackage[i]['added'] = false;
+		}
+		// console.log(this.dataPackage);
 	}
 
 	ngOnInit(): void {
@@ -32,6 +42,11 @@ export class DestinationComponent implements OnInit {
 
 	addToCart (item) {
 		this.cartService.pushToCart(item);
+		item['added'] = true;
+		console.log(this.dataPackage);
+		
 	}
+
+	// cartButton : [ {added:true, value:'Remove'},{added:false, value:'Add'} ]; 
 
 }

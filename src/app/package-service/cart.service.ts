@@ -19,6 +19,4 @@ export class CartService {
    getCartItems () {
      return this.cartItems;
    }
-
-
 }

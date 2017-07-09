@@ -6,6 +6,8 @@ $mob-res: 767px;
 
 .cart-wrapper {
 		ul {
+			max-height: 80vh;
+			overflow: auto;
 			li {
 				list-style: none;
 
