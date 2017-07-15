@@ -20,10 +20,7 @@ export class HeaderComponent implements OnInit {
     this.cartService = cartService;
   }
 
-  cart = {
-    items:[],
-    count:0
-  }
+  cart = {};
 
   getCartItems () {
     this.cart = this.cartService.getCartItems();
@@ -61,10 +58,7 @@ export class DialogContent implements OnInit  {
        private cartService: CartService) 
   { this.cartService = cartService; }
 
-    cart = {
-    items:[],
-    count:0
-  }
+    cart = {};
 
     getCartItems () {
     this.cart = this.cartService.getCartItems();
@@ -74,18 +68,8 @@ export class DialogContent implements OnInit  {
     this.getCartItems();
   }
 
-  removePackage($event: any) {
-      // $('#packageNo'+ $event +'').fadeOut(900).delay(900).remove();
-      // console.log(this.cart.items[($event)-1].id);
-      // console.log(this.cart.items);
-      // if(this.cart.items)
-      // console.log($event);
-      // $.each(this.cart.items, function(index, value){
-      //   if(value.id == $event) {
-      //     value.splice(index,1);
-      //   }
-      // });
-      // this.cart.count--;
-    }
+  removePackage(item) {
+    this.cartService.removeItem(item.id);
+  }
 
 }

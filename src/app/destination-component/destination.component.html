@@ -16,7 +16,7 @@
 				</div>
 			</div>
 			<div class="package-action">
-				<button routerLink="/detail-destination/{{ item.id }}"><span>Read More</span></button><button (click)="addToCart(item)" class="btn-add"><i class="fa fa-plus-square-o"></i> Add</button>
+				<button routerLink="/detail-destination/{{ item.id }}"><span>Read More</span></button><button (click)="addToCart(item)" [hidden]="item.added" class="btn-add"><i class="fa fa-plus-square-o"></i> Add</button><button (click)="removePackage(item)" [hidden]="!item.added" class="btn-add"><i class="fa fa-minus-circle"></i> Remove</button>
 			</div>
 		</div>
 

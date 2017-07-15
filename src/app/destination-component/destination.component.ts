@@ -26,27 +26,32 @@ export class DestinationComponent implements OnInit {
 
 		this.packageService.getDestination().then(dataPackage => {
 			this.dataPackage = dataPackage;
-			this.setValue();});	
+			this.setValue();
+			this.shareData();
+		});	
 	}
 
-	setValue() {
+	setValue(): void {
 		for (var i = 0; i < this.dataPackage.length; ++i) {
 			this.dataPackage[i]['added'] = false;
 		}
-		// console.log(this.dataPackage);
+	}
+
+	shareData(): void {
+		this.cartService.pushToCart(this.dataPackage);
+	}
+
+	addToCart (item) {
+		item['added'] = true;
+		this.shareData();
+	}
+
+	removePackage(item) {
+		this.cartService.removeItem(item.id);
 	}
 
 	ngOnInit(): void {
 		this.getData();
 	}
-
-	addToCart (item) {
-		this.cartService.pushToCart(item);
-		item['added'] = true;
-		console.log(this.dataPackage);
-		
-	}
-
-	// cartButton : [ {added:true, value:'Remove'},{added:false, value:'Add'} ]; 
 
 }

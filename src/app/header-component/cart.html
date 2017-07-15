@@ -1,11 +1,11 @@
 <div class="cart-wrapper">
     <ul>
-      <li *ngFor="let item of cart.items" id="packageNo{{item.id}}">
+      <li *ngFor="let item of cart.items" [hidden]="!item.added" id="packageNo{{item.id}}">
 	      <md-card class="example-card">
 	        <md-card-header>
 	          <div md-card-avatar class="example-header-image"></div>
 	          <md-card-title>{{item.destination}}</md-card-title>
-	          <span (click)="removePackage(item.id)"><i class="fa fa-minus-circle"></i></span>
+	          <span (click)="removePackage(item)"><i class="fa fa-minus-circle"></i></span>
 	          <md-card-subtitle>{{item.no_of_days}} Days</md-card-subtitle>
 	        </md-card-header>
 	      </md-card>
