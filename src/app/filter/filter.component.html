@@ -1,0 +1,39 @@
+<md-card >
+	  <form action="">
+
+	  <md-card-content class="arrival-width">
+	  	<md-input-container>
+	  	  <input mdInput [mdDatepicker]="arrivalPicker" placeholder="Arrival Date">
+	  	  <button mdSuffix [mdDatepickerToggle]="arrivalPicker"></button>
+	  	</md-input-container>
+	  	<md-datepicker #arrivalPicker></md-datepicker>
+	  </md-card-content>
+
+	  	<md-card-content>
+		  	<md-select placeholder="No of Days" [(ngModel)]="selectedDays" name="days">
+		  	  <md-option *ngFor="let day of days" [value]="day.value">
+		  	    {{day.viewValue}}
+		  	  </md-option>
+		  	</md-select>
+	  	</md-card-content>
+
+	  	<md-card-content>
+		  	<md-select placeholder="No of Person" [(ngModel)]="selectedPersons" name="persons">
+		  	  <md-option *ngFor="let person of persons" [value]="person.value">
+		  	    {{person.viewValue}}
+		  	  </md-option>
+		  	</md-select>
+	  	</md-card-content>
+
+	  	<md-card-content >
+		  	<md-select class="type-width" placeholder="Tour Style" [(ngModel)]="selectedType" name="types">
+		  	  <md-option *ngFor="let type of types" [value]="type.value">
+		  	    {{type.viewValue}}
+		  	  </md-option>
+		  	</md-select>
+	  	</md-card-content>
+
+	  	<button type="submit" md-raised-button class="search-button">SEARCH</button>
+
+	  </form>
+</md-card>

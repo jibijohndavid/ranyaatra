@@ -1,0 +1,31 @@
+$primary-color: #1D2731  ;
+$secondary-color: #F7C331;
+$text-color:  ghostwhite;
+$tab-res: 960px;
+$mob-res: 767px;
+
+
+md-card {
+	
+
+	form{
+		text-align: center;
+		md-card-content{
+			display: inline-block;
+			margin: 0 20px;
+			text-align: left;
+		}
+		.arrival-width {
+			width: 120px;
+		}
+		.type-width {
+			width: 170px;
+		}
+
+		.search-button {
+			width: 120px;
+			background-color: $secondary-color;
+		}
+	}
+
+}

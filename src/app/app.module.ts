@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
-import { MaterialModule } from '@angular/material';
+import { MaterialModule, MdNativeDateModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,7 @@ import { CartService }          from './package-service/cart.service';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { DetailDestinationComponent } from './detail-destination/detail-destination.component';
+import { FilterComponent } from './filter/filter.component';
 
 
 
@@ -31,7 +32,8 @@ import { DetailDestinationComponent } from './detail-destination/detail-destinat
     HomeComponent,
     DetailComponent,
     DialogContent,
-    DetailDestinationComponent
+    DetailDestinationComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { DetailDestinationComponent } from './detail-destination/detail-destinat
     HttpModule,
     AppRoutingModule,
     MaterialModule,
+    MdNativeDateModule,
     BrowserAnimationsModule
   ],
   providers: [PackageService,CartService],
