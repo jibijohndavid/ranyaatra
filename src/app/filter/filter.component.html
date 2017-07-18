@@ -26,7 +26,7 @@
 	  	</md-card-content>
 
 	  	<md-card-content >
-		  	<md-select class="type-width" placeholder="Tour Style" [(ngModel)]="selectedType" name="types">
+		  	<md-select class="type-width" placeholder="Tour Style" [(ngModel)]="selectedTypes" name="types">
 		  	  <md-option *ngFor="let type of types" [value]="type.value">
 		  	    {{type.viewValue}}
 		  	  </md-option>

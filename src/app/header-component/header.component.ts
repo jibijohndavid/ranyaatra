@@ -20,7 +20,10 @@ export class HeaderComponent implements OnInit {
     this.cartService = cartService;
   }
 
-  cart = {};
+  cart = {
+  	items:[],
+  	count:0
+  };
 
   getCartItems () {
     this.cart = this.cartService.getCartItems();
@@ -58,7 +61,10 @@ export class DialogContent implements OnInit  {
        private cartService: CartService) 
   { this.cartService = cartService; }
 
-    cart = {};
+    cart = {
+    	items:[],
+    	count:0
+    };
 
     getCartItems () {
     this.cart = this.cartService.getCartItems();
