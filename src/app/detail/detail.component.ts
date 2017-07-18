@@ -4,6 +4,8 @@ import { ActivatedRoute,Params } from '@angular/router';
 import { PackageService } from '../package-service/package.service';
 import { PackageData } 		from '../package-component/PackageData'
 
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-detail',
@@ -24,5 +26,33 @@ export class DetailComponent implements OnInit {
       this.route.params
       .switchMap((params: Params) => this.packageService.getPackageDetails(+params['id']))
       .subscribe(dataPackage => this.dataPackage = dataPackage);
+
+
+      $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        asNavFor: '#slider'
+      });
+      
+      $('#slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        directionNav: false,
+        sync: "#carousel",
+        start: function(slider) {
+          slider.resize();
+        }
+      });
+
+      // $('#carousel li').on("click", function (event) {
+      //   $('#slider').flexslider().resize();
+      //   $('#slider').fadeIn(500);
+      // })
   }
 }
