@@ -1,17 +1,22 @@
 <div class="cart-wrapper">
-    <ul>
-      <li *ngFor="let item of cart.items" [hidden]="!item.added" id="packageNo{{item.id}}">
-	      <md-card class="example-card">
-	        <md-card-header>
-	          <div md-card-avatar class="example-header-image"></div>
-	          <md-card-title>{{item.destination}}</md-card-title>
-	          <span (click)="removePackage(item)"><i class="fa fa-minus-circle"></i></span>
-	          <md-card-subtitle>{{item.no_of_days}} Days</md-card-subtitle>
-	        </md-card-header>
-	      </md-card>
-      </li>
+    <ul *ngIf="cart.count">
+	    <ng-container *ngFor="let item of cart.items">
+	      <li *ngIf="item.added" id="packageNo{{item.id}}">
+		      <md-card class="example-card">
+		        <md-card-header>
+		          <div md-card-avatar class="example-header-image"></div>
+		          <md-card-title>{{item.destination}}</md-card-title>
+		          <span (click)="removePackage(item)"><i class="fa fa-minus-circle"></i></span>
+		          <md-card-subtitle>{{item.no_of_days}} Days</md-card-subtitle>
+		        </md-card-header>
+		      </md-card>
+	      </li>
+        </ng-container>
     </ul>
-
+    <div *ngIf="!cart.count" class="no-items">
+    	<img src="./assets/images/no-items.png">
+    	<p>No items</p>
+    </div>
 	<div> 
 		<button md-button>BOOK TOUR</button>
 		<button md-button (click)="dialogRef.close()">CLOSE</button> 
